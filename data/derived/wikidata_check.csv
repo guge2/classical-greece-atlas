@@ -1,0 +1,75 @@
+id,zh_name,pleiades_id,wikidata_id,wikidata_zh,wikidata_en,matches_zh_name
+athenae,雅典,579885,Q844930,古雅典,Classical Athens,no
+piraeus,比雷埃夫斯,580062,Q58976,比雷埃夫斯,Piraeus,yes
+sparta,斯巴达,570685,Q5690,斯巴达,Sparta,yes
+corinthus,科林斯,570182,Q1363688,科林斯,Ancient Corinth,yes
+thebae,底比斯,541138,Q11225429,古底比斯,Thebes,no
+delphi,德尔斐,540726,Q75459,德尔斐,Delphi;Delphic Oracle,yes
+olympia,奥林匹亚,570531,Q38888,奥林匹亚考古遗址,Olympia,no
+corcyra,科西拉,530834,Q3693378,科爾庫拉,Corcyra,no
+amphipolis,安菲波利斯,501347,Q217414,安菲波利斯,Amphipolis,yes
+byzantium,拜占庭,520985,Q23725,拜占庭,Byzantium,yes
+ilium,特洛伊,550595,Q22647,特洛伊,Troy;Ilium,yes
+mytilene,米提列涅,550763,Q42295059,,Mytilene,no
+chios,希俄斯,550496,Q56399450,,Chios,no
+samos,萨摩斯,599925,Q13580795,,Samos,no
+ephesus,以弗所,599612,Q47611,以弗所,Ephesus;Arsinoia,yes
+miletus,米利都,599799,Q169460,米利都,Miletus,yes
+rhodos,罗得斯,590030,Q13533316,古罗得,Rhodes,no
+syracusae,叙拉古,462503,Q13670,锡拉库萨,Syracuse,yes
+rhegium,雷吉翁,452416,Q3429952,,Rhegion,no
+taras,塔拉斯,442810,Q13498,塔兰托;他林敦,Taranto;Taras,yes
+dodona,多多纳,530843,Q382317,多多纳,Dodona,yes
+ambracia,安布拉基亚,530794,Q661559,阿姆巴西亚,Ambracia,no
+naupactus,瑙帕克托斯,540960,Q56398924,,Ancient Naupactus,no
+thermopylae,温泉关,541140,Q194450,溫泉關,Thermopylae,no
+plataea,普拉提亚,541063,Q742538,普拉塔伊,Plataea,no
+chalcis,哈尔基斯,540703,Q21235810,,Chalcis,no
+megara,麦加拉,570468,Q184864,迈加拉,Megara,no
+sicyon,西库翁,570668,Q368628,西库翁,Sicyon,yes
+argos,阿尔戈斯,570106,Q13533353,,Argos,no
+epidaurus,埃皮达鲁斯,570228,Q233576,埃皮達魯斯,Epidaurus,no
+mantinea,曼提尼亚,570459,Q1160195,门丁尼亚,Mantineia,no
+tegea,特该亚,570707,Q645234,泰耶阿,Tegea,no
+pylos,皮洛斯,570640,Q7263152,皮洛斯,Pylos,yes
+sphacteria,斯法克特里亚,570686,Q1303524,斯法克蒂里亚岛,Sphacteria,no
+aegina,埃伊纳,579853,Q57394139,,Aegina,no
+melos,米洛斯,570474,,,,no
+delos,德洛斯,599587,Q131911921,,Delos,no
+potidaea,波提狄亚,491701,Q999468,波提狄亞,Potidaea,no
+olynthus,奥林托斯,491678,Q1141669,奧林索斯,Olynthus,no
+eion,埃伊翁,501410,Q1268859,埃昂,Eion,no
+thasos,萨索斯,501634,Q2409204,,Thasos,no
+samothrace,萨莫色雷斯,501596,Q123706384,,Samothrace;Palaiopoli Archaeological Site,no
+sestos,塞斯托斯,501609,Q593737,塞司陀斯,Sestos,no
+abydos,阿拜多斯,501325,Q336446,阿卑多斯 (赫勒斯滂),Abydos,no
+lampsacus,兰普萨科斯,501570,Q1229422,兰普萨库斯,Lampsacus,no
+cyzicus,基齐库斯,511218,Q615449,基齐库斯,Cyzicus,yes
+methymna,墨提姆那,550738,Q38281278,,Methymna,no
+phocaea,福西亚,550823,Q428732,菲西人,Phocaea,no
+clazomenae,克拉佐门奈,550650,Q536598,克勞佐梅尼,Klazomenai,no
+erythrae,厄律特莱,550535,Q723091,埃律特莱亚,Erythrae,no
+halicarnassus,哈利卡纳苏斯,599636,Q5843680,哈利卡那索斯,Halicarnassus,yes
+cos,科斯,599728,Q568212,科斯;科斯岛,Kos,yes
+cnidus,克尼多斯,599576,Q690575,克尼多斯,Knidos,yes
+segesta,塞杰斯塔,462487,Q692847,塞傑斯塔,Segesta,no
+selinus,塞利努斯,462489,Q952173,塞利农特,Selinunte,yes
+himera,希梅拉,462244,Q1111219,希梅拉,Himera,yes
+acragas,阿克拉加斯,462086,Q13678,阿格里真托,Agrigento,yes
+gela,杰拉,462214,Q58008539,,Gela,no
+camarina,卡马里纳,462126,Q854843,卡馬利納,Kamarina,no
+catana,卡塔那,462270,Q1903,卡塔尼亞,Catania,no
+leontini,莱昂蒂尼,462279,Q488240,伦蒂尼,Lentini;Leontini,yes
+naxos_siciliae,纳克索斯,462386,Q1233293,,Naxos,no
+messana,墨西拿,462538,Q4023782,,Messana,no
+megara_hyblaea,麦加拉·许布莱亚,462307,Q1457477,麥加拉,Megara Hyblaea,no
+motya,莫提亚,462373,Q962184,莫特亚,Mozia,no
+panormus,帕诺尔莫斯,462410,Q60181639,,Panormus,no
+locri,洛克里,452369,Q54619,洛克里,Locri;Epizephyrian Locris,yes
+croton,克罗顿,452317,Q13526919,,Kroton,no
+sybaris_thurii,锡巴里斯／图里伊,452457,Q220583,锡巴里斯;圖利 (古希臘),Sybaris;Thurii,yes
+metapontum,梅塔蓬图姆,442658,Q1058770,米太旁登,Metapontum,no
+poseidonia,波塞多尼亚,442733,Q329967,帕埃斯图姆,Paestum,no
+elea,埃利亚,452488,Q272968,韦利亚,Velia,yes
+cumae,库迈,432808,Q243456,庫邁,Cumae,no
+neapolis,尼亚波利斯,433014,Q2634,那不勒斯,Naples;Neapolis,yes

@@ -1,0 +1,6 @@
+cache/
+build/qa/
+build/layout_report.json
+.venv/
+__pycache__/
+*.pyc
