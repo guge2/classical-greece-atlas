@@ -19,6 +19,14 @@ class Annotation:
 
 
 @dataclass
+class FactionArea:
+    """势力图中的示意范围；边界只表达联盟归属，不作为精确政区界线。"""
+    name: str
+    side: str
+    points: list[tuple[float, float]]
+
+
+@dataclass
 class MapSpec:
     id: str
     file: str
@@ -35,13 +43,39 @@ class MapSpec:
     title_block: dict = field(default_factory=dict)
     regions: list = field(default_factory=list)
     seas: list = field(default_factory=list)
+    faction_areas: list = field(default_factory=list)
+    faction_legend: dict = field(default_factory=dict)
+    fit: str = "extent"                 # extent（按配置范围）| content（按实际内容收紧）
+    content_margin_mm: float = 16.0
     source_note: str = ""
 
     @property
     def frame(self) -> MapFrame:
         if not hasattr(self, "_frame"):
-            self._frame = MapFrame(self.extent, projection=self.projection)
+            content = self.content_points() if self.fit == "content" else None
+            self._frame = MapFrame(self.extent, projection=self.projection,
+                                   content=content,
+                                   content_margin_mm=self.content_margin_mm)
         return self._frame
+
+    def content_points(self) -> list:
+        """定框依据：地点标记与势力范围。
+
+        地区名与海域名不参与定框——它们本来就是放在空白海面上的注记，
+        若让它们参与，画幅会被这些注记反过来撑大。注记必须落在成图范围内，
+        这一点由 atlas.check 校验，越界即报错。
+        """
+        points = []
+        for area in self.faction_areas:
+            points.extend((lon, lat) for lon, lat in area.points)
+        places = load_places()
+        for row in load_map_places().get(self.id, []):
+            place = places.get(row["place_id"])
+            if place is not None:
+                points.append((place["lon"], place["lat"]))
+        if not points:
+            raise SystemExit(f"{self.id}：fit=content 但没有任何可定位的内容")
+        return points
 
     @property
     def derived_dir(self):
@@ -66,10 +100,17 @@ def load_maps(path=None) -> list[MapSpec]:
             terrain_max_px=int(terrain.get("max_px", C.TERRAIN_MAX_PX)),
             projection=dict(m.get("projection", {})),
             title_block=dict(m.get("title_block", {})),
+            fit=str(m.get("fit", "extent")),
+            content_margin_mm=float(m.get("content_margin_mm", 16.0)),
             regions=[Annotation(a["name"], a["lon"], a["lat"], a.get("over", "land"))
                      for a in m.get("regions", [])],
             seas=[Annotation(a["name"], a["lon"], a["lat"], a.get("over", "sea"))
                   for a in m.get("seas", [])],
+            faction_areas=[FactionArea(
+                a["name"], a["side"],
+                [(float(p[0]), float(p[1])) for p in a["points"]],
+            ) for a in m.get("faction_areas", [])],
+            faction_legend=dict(m.get("faction_legend", {})),
             source_note=m.get("source_note", defaults.get("source_note", "")),
         ))
     return out
@@ -80,17 +121,30 @@ def read_csv(path):
         return list(csv.DictReader(fh))
 
 
+_PLACES_CACHE = {}
+
+
 def load_places(path=None) -> dict:
+    key = str(path or C.PLACES)
+    if key in _PLACES_CACHE:
+        return _PLACES_CACHE[key]
     rows = read_csv(path or C.PLACES)
     places = {}
     for r in rows:
         r["lon"] = float(r["lon"])
         r["lat"] = float(r["lat"])
         places[r["id"]] = r
+    _PLACES_CACHE[key] = places
     return places
 
 
+_MAP_PLACES_CACHE = {}
+
+
 def load_map_places(path=None) -> dict:
+    key = str(path or C.MAP_PLACES)
+    if key in _MAP_PLACES_CACHE:
+        return _MAP_PLACES_CACHE[key]
     rows = read_csv(path or C.MAP_PLACES)
     out: dict[str, list] = {}
     for r in rows:
@@ -99,4 +153,5 @@ def load_map_places(path=None) -> dict:
         r["dy_mm"] = float(r["dy_mm"]) if r.get("dy_mm") else None
         r["anchor"] = (r.get("anchor") or "").strip()
         out.setdefault(r["map_id"], []).append(r)
+    _MAP_PLACES_CACHE[key] = out
     return out

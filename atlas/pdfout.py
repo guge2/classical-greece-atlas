@@ -9,7 +9,6 @@ import numpy as np
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt                                    # noqa: E402
-from matplotlib import patheffects                                 # noqa: E402
 from matplotlib.backends.backend_pdf import PdfPages               # noqa: E402
 from matplotlib.font_manager import FontProperties                 # noqa: E402
 from matplotlib.patches import Circle as MplCircle                 # noqa: E402
@@ -70,6 +69,28 @@ def draw_scene(scene: SC.Scene, ax, book: F.FontBook) -> None:
                 linewidth=_lw(item.stroke_w), joinstyle="round", zorder=z)
             ax.add_patch(patch)
             patch.set_clip_path(frame_path, ax.transData)
+        elif isinstance(item, SC.HatchPolys):
+            clip_patch = PathPatch(_compound_path(item.rings), facecolor="none",
+                                   edgecolor="none", zorder=z)
+            ax.add_patch(clip_patch)
+            spacing = max(1.4, float(item.spacing_mm))
+            if item.orientation == "horizontal":
+                positions = np.arange(fy, fy + fh + spacing, spacing)
+                segments = [[(fx, pos), (fx + fw, pos)] for pos in positions]
+            else:
+                positions = np.arange(fx, fx + fw + spacing, spacing)
+                segments = [[(pos, fy), (pos, fy + fh)] for pos in positions]
+            # 一次提交整组纹理线，使 PDF 只写入一次复杂联盟范围裁剪路径；
+            # 逐线 set_clip_path 会把同一路径重复数百次，显著放大文件。
+            hatch_verts = np.asarray(segments, dtype=float).reshape(-1, 2)
+            hatch_codes = np.tile([MplPath.MOVETO, MplPath.LINETO], len(segments))
+            hatch_path = MplPath(hatch_verts, hatch_codes)
+            hatch_patch = PathPatch(
+                hatch_path, fill=False, edgecolor=item.color,
+                linewidth=_lw(item.stroke_w), alpha=0.86,
+                capstyle="butt", zorder=z)
+            ax.add_patch(hatch_patch)
+            hatch_patch.set_clip_path(clip_patch)
         elif isinstance(item, SC.Image):
             arr = np.asarray(PILImage.open(item.path).convert("L"), dtype=float) / 255.0
             im = ax.imshow(arr, cmap="gray", vmin=0.0, vmax=1.0,
@@ -116,20 +137,25 @@ def _draw_text(ax, t: SC.Text, book: F.FontBook, z: int) -> None:
     elif t.align == "end":
         x -= width_units * k
     prop = _font(t.font_key, t.size_pt)
-    # 光晕单独画一遍。matplotlib 一旦给文字加 path effect 就改用路径绘制，
-    # 与正文合用会让 PDF 不再嵌入字体子集；因此正文一遍不带任何 path effect。
+    # 用同一字体在八个方向轻移来形成光晕。path effect 会把每个汉字展开成
+    # 大段轮廓坐标；轻移文本既保留字体子集，也让五页 PDF 小得多。
     passes = []
     if t.halo_mm:
-        passes.append((C.PAPER, [patheffects.withStroke(
-            linewidth=_lw(t.halo_mm), foreground=C.PAPER)], 0.82))
-    passes.append((t.color, None, None))
+        radius = t.halo_mm / 2.0
+        diagonal = radius / np.sqrt(2.0)
+        for dx, dy in ((-radius, 0.0), (radius, 0.0),
+                       (0.0, -radius), (0.0, radius),
+                       (-diagonal, -diagonal), (diagonal, -diagonal),
+                       (-diagonal, diagonal), (diagonal, diagonal)):
+            passes.append((C.PAPER, 0.82, dx, dy))
+    passes.append((t.color, None, 0.0, 0.0))
     cursor = 0.0
     for ch, g in zip(t.text, glyphs):
         if not ch.isspace():
-            for color, effects, alpha in passes:
-                ax.text(x + cursor * k, t.baseline, ch, fontproperties=prop, color=color,
-                        ha="left", va="baseline", zorder=z, path_effects=effects,
-                        alpha=alpha)
+            for color, alpha, dx, dy in passes:
+                ax.text(x + cursor * k + dx, t.baseline + dy, ch,
+                        fontproperties=prop, color=color,
+                        ha="left", va="baseline", zorder=z, alpha=alpha)
         cursor += g.advance + tracking_units
 
 
@@ -150,7 +176,8 @@ def save_pdf(scenes, book: F.FontBook, path: Path) -> Path:
     with PdfPages(path) as pdf:
         for scene in scenes:
             fig = make_figure(scene, book)
-            pdf.savefig(fig, facecolor=C.PAPER)
+            # 只控制地形栅格的输出分辨率；文字、线条与纹理仍为矢量。
+            pdf.savefig(fig, facecolor=C.PAPER, dpi=C.PDF_IMAGE_DPI)
             plt.close(fig)
         info = pdf.infodict()
         info["Title"] = "古典希腊中文静态地图集"

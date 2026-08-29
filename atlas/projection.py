@@ -28,12 +28,20 @@ class Extent:
 class MapFrame:
     """把地理坐标映射到 A3 页面毫米坐标（y 轴向下）。"""
 
-    def __init__(self, extent: Extent, frame=None, projection=None):
+    def __init__(self, extent: Extent, frame=None, projection=None,
+                 content=None, content_margin_mm: float = 0.0):
         self.extent = extent
         fx, fy, fw, fh = frame or (C.FRAME_X_MM, C.FRAME_Y_MM, C.FRAME_W_MM, C.FRAME_H_MM)
         self.fx, self.fy, self.fw, self.fh = fx, fy, fw, fh
+        self.fitted_to_content = bool(content)
 
-        self.params = self.default_params(extent)
+        # 收紧画幅时，投影中心与标准纬线跟着实际内容走，而不是配置范围
+        basis = extent
+        if content:
+            lons = [p[0] for p in content]
+            lats = [p[1] for p in content]
+            basis = Extent(min(lons), max(lons), min(lats), max(lats))
+        self.params = self.default_params(basis)
         self.params.update({k: float(v) for k, v in (projection or {}).items()
                             if k in self.params})
         p = self.params
@@ -46,8 +54,11 @@ class MapFrame:
         self._fwd = Transformer.from_crs(CRS.from_epsg(4326), self.crs, always_xy=True)
         self._inv = Transformer.from_crs(self.crs, CRS.from_epsg(4326), always_xy=True)
 
-        x, y = self._project_extent_ring()
-        x0, x1, y0, y1 = x.min(), x.max(), y.min(), y.max()
+        if content:
+            x0, x1, y0, y1 = self._content_window(content, content_margin_mm)
+        else:
+            x, y = self._project_extent_ring()
+            x0, x1, y0, y1 = x.min(), x.max(), y.min(), y.max()
         # 按地图框宽高比在投影平面上居中扩展，保证不变形
         target = self.fw / self.fh
         w, h = x1 - x0, y1 - y0
@@ -59,6 +70,24 @@ class MapFrame:
             y0, y1 = y0 - grow, y1 + grow
         self.px0, self.px1, self.py0, self.py1 = x0, x1, y0, y1
         self.mm_per_m = self.fw / (x1 - x0)
+
+    def _content_window(self, content, margin_mm: float):
+        """由实际绘制内容的包围盒定框，四周留出指定毫米数的空隙。
+
+        留白的实地宽度取决于比例尺，而比例尺又取决于留白，故迭代收敛。
+        """
+        lon = np.asarray([p[0] for p in content], dtype=float)
+        lat = np.asarray([p[1] for p in content], dtype=float)
+        cx, cy = self._fwd.transform(lon, lat)
+        x0, x1 = float(np.min(cx)), float(np.max(cx))
+        y0, y1 = float(np.min(cy)), float(np.max(cy))
+        margin_m = 0.0
+        for _ in range(6):
+            w = max(x1 - x0 + 2 * margin_m, 1.0)
+            h = max(y1 - y0 + 2 * margin_m, 1.0)
+            scale = min(self.fw / w, self.fh / h)      # 毫米每米
+            margin_m = margin_mm / scale if scale else 0.0
+        return x0 - margin_m, x1 + margin_m, y0 - margin_m, y1 + margin_m
 
     @staticmethod
     def default_params(extent: Extent) -> dict:

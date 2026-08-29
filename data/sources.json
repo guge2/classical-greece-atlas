@@ -2,7 +2,7 @@
   "ne_gray_earth": {
     "attribution": "Natural Earth, 1:10m Gray Earth with Shaded Relief and Ocean Bottom",
     "bytes": 90734126,
-    "fetched_utc": "2026-08-29T13:46:48Z",
+    "fetched_utc": "2026-08-29T16:11:07Z",
     "filename": "GRAY_HR_SR_OB.zip",
     "license": "Public Domain",
     "sha256": "15a183d227b310cec521da53713060050ef0d49352a17815930611997a8044d0",
@@ -11,7 +11,7 @@
   "ne_land": {
     "attribution": "Natural Earth, 1:10m Physical Vectors, ne_10m_land",
     "bytes": 3269070,
-    "fetched_utc": "2026-08-29T13:46:48Z",
+    "fetched_utc": "2026-08-29T16:11:06Z",
     "filename": "ne_10m_land.zip",
     "license": "Public Domain",
     "sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc",
@@ -20,7 +20,7 @@
   "ne_minor_islands": {
     "attribution": "Natural Earth, 1:10m Physical Vectors, ne_10m_minor_islands",
     "bytes": 314932,
-    "fetched_utc": "2026-08-29T13:46:48Z",
+    "fetched_utc": "2026-08-29T16:11:06Z",
     "filename": "ne_10m_minor_islands.zip",
     "license": "Public Domain",
     "sha256": "47c0b3ce26df7b4dbabdbb251023918cb2f5c83462a426288f1f253da7284db2",
@@ -29,17 +29,10 @@
   "pleiades": {
     "attribution": "Pleiades: A Gazetteer of Past Places, https://pleiades.stoa.org/ (CC BY 3.0)",
     "bytes": 6786576,
-    "fetched_utc": "2026-08-29T13:46:48Z",
+    "fetched_utc": "2026-08-29T16:11:07Z",
     "filename": "pleiades-places-latest.csv.gz",
     "license": "CC BY 3.0",
     "sha256": "9f7c582940bdb9970b2709088cd8f43a74f344a99498af391020606f97aa132c",
     "url": "https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz"
-  },
-  "wikidata": {
-    "attribution": "Wikidata（经 P1584 Pleiades ID 关联，仅作中文标签交叉核对）",
-    "fetched_utc": "2026-08-29T13:46:51Z",
-    "license": "CC0 1.0（Wikidata 结构化数据）",
-    "matched": 73,
-    "url": "https://query.wikidata.org/sparql"
   }
 }

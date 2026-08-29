@@ -1,4 +1,4 @@
-"""离线生成四幅 SVG 与合并 PDF。
+"""离线生成五幅 SVG 与合并 PDF。
 
 用法：uv run python -m atlas.build --all [--no-pdf] [--no-minify]
 """
@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 import time
 
@@ -63,9 +64,18 @@ def build(map_ids=None, make_pdf: bool = True, minify: bool = True) -> dict:
             print(f"        · {note}")
 
     if make_pdf and len(specs) == len(load_maps()):
-        pdf_path = C.BUILD / PDF_NAME
+        pdf_path = C.PDF_OUTPUT / PDF_NAME
         pdfout.save_pdf(scenes, book, pdf_path)
+        # 保留原 build/ 路径作为兼容副本；若文件正被预览器占用，正式输出
+        # 仍已安全写入 output/pdf/，下次构建会再次尝试同步。
+        legacy_pdf = C.BUILD / PDF_NAME
+        try:
+            shutil.copy2(pdf_path, legacy_pdf)
+        except OSError as exc:
+            print(f"  [提醒] 无法更新 {legacy_pdf.relative_to(C.ROOT)}：{exc}")
         report["pdf_bytes"] = pdf_path.stat().st_size
+        report["pdf_file"] = str(pdf_path.relative_to(C.ROOT)).replace("\\", "/")
+        report["pdf_image_dpi"] = C.PDF_IMAGE_DPI
         print(f"  [PDF] {PDF_NAME}  {pdf_path.stat().st_size:,} 字节  {len(scenes)} 页")
     elif make_pdf:
         print("  [PDF] 仅构建了部分地图，跳过合并 PDF")
@@ -79,7 +89,7 @@ def build(map_ids=None, make_pdf: bool = True, minify: bool = True) -> dict:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="生成古典希腊中文静态地图集")
-    ap.add_argument("--all", action="store_true", help="构建全部四幅地图与合并 PDF")
+    ap.add_argument("--all", action="store_true", help="构建全部五幅地图与合并 PDF")
     ap.add_argument("--map", action="append", dest="maps", metavar="ID",
                     help="只构建指定地图（可重复）")
     ap.add_argument("--no-pdf", action="store_true", help="跳过合并 PDF")

@@ -100,6 +100,10 @@ class SvgWriter:
                 style.append(f'stroke="{item.stroke}" stroke-width="{_n(item.stroke_w)}" '
                              'stroke-linejoin="round"')
             return f'<path clip-path="url(#frameClip)" d="{d}" {" ".join(style)}/>'
+        if isinstance(item, SC.HatchPolys):
+            d = "".join(_ring_path(ext, holes) for ext, holes in item.rings)
+            return (f'<path clip-path="url(#frameClip)" d="{d}" '
+                    f'fill="url(#hatch-{item.orientation})" fill-rule="evenodd"/>')
         if isinstance(item, SC.Image):
             payload = base64.b64encode(item.path.read_bytes()).decode("ascii")
             return (f'<image clip-path="url(#landClip)" x="{_n(item.x)}" y="{_n(item.y)}" '
@@ -132,6 +136,12 @@ class SvgWriter:
             f'<clipPath id="frameClip"><rect x="{_n(frame.fx)}" y="{_n(frame.fy)}" '
             f'width="{_n(frame.fw)}" height="{_n(frame.fh)}"/></clipPath>',
             f'<clipPath id="landClip"><path d="{land_d}" clip-rule="evenodd"/></clipPath>',
+            (f'<pattern id="hatch-horizontal" patternUnits="userSpaceOnUse" width="3.2" height="3.2">'
+             f'<path d="M0 0H3.2" stroke="{C.ATHENIAN_HATCH}" '
+             f'stroke-width="{_n(C.LW_HATCH)}" opacity="0.86"/></pattern>'),
+            (f'<pattern id="hatch-vertical" patternUnits="userSpaceOnUse" width="3.2" height="3.2">'
+             f'<path d="M0 0V3.2" stroke="{C.SPARTAN_HATCH}" '
+             f'stroke-width="{_n(C.LW_HATCH)}" opacity="0.86"/></pattern>'),
         ]
         defs += [f'<path id="{gid}" d="{d}"/>' for gid, d in sorted(self.glyph_defs.items())]
         title = escape(f"{scene.spec.title} · {scene.spec.subtitle}")

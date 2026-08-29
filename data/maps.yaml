@@ -1,4 +1,4 @@
-# 四幅地图的标题、范围、投影与注记配置。
+# 五幅地图的标题、范围、投影与注记配置。
 # extent: [经度最小, 经度最大, 纬度最小, 纬度最大]（WGS84 十进制度）
 # 实际成图范围会在投影平面上按地图框宽高比居中扩展，保证等角不变形。
 
@@ -12,11 +12,12 @@ maps:
     title: "古典希腊世界"
     subtitle: "公元前五世纪 · 地理总览"
     extent: [12.0, 30.0, 33.5, 43.0]
-    simplify_km: 3.6
+    simplify_km: 3.26
     scalebar_km: 300
     min_island_km2: 15.0
+    fit: content            # 画幅按本图实际内容收紧
+    content_margin_mm: 16   # 内容四周保留的页面留白（毫米）
     title_block: {corner: SW, dx_mm: 0, dy_mm: 0}   # 标题块压在图上的角落
-    projection: {lon_0: 21.0, lat_0: 38.25, lat_1: 35.08, lat_2: 41.42}
     terrain: {enabled: true, opacity: 0.12, max_px: 1800}
     regions:
       - {name: "意大利", lon: 15.6, lat: 40.9}
@@ -26,84 +27,98 @@ maps:
       - {name: "马其顿", lon: 22.2, lat: 41.2}
       - {name: "色雷斯", lon: 25.8, lat: 41.6}
       - {name: "伯罗奔尼撒", lon: 22.1, lat: 37.3}
-      - {name: "爱奥尼亚", lon: 27.6, lat: 38.4}
-      - {name: "卡里亚", lon: 28.6, lat: 37.2}
+      - {name: "爱奥尼亚", lon: 28.15, lat: 38.15}
+      - {name: "卡里亚", lon: 28.52, lat: 37.18}
       - {name: "克里特", lon: 24.9, lat: 35.15}
     seas:
       - {name: "第勒尼安海", lon: 12.6, lat: 39.7}
       - {name: "亚得里亚海", lon: 17.4, lat: 41.9}
       - {name: "爱奥尼亚海", lon: 18.7, lat: 37.9}
       - {name: "爱琴海", lon: 25.1, lat: 38.0}
-      - {name: "黑海", lon: 30.4, lat: 42.6}
-      - {name: "地中海", lon: 26.8, lat: 34.0}
+      - {name: "黑海", lon: 29.26, lat: 42.68}
+      - {name: "地中海", lon: 26.68, lat: 34.38}
 
   - id: "02-mainland"
     file: "02-mainland.svg"
     title: "希腊本土与伯罗奔尼撒"
     subtitle: "公元前五世纪 · 本土核心区"
     extent: [19.0, 25.5, 35.7, 40.8]
-    simplify_km: 1.2
+    simplify_km: 0.76
     scalebar_km: 100
     min_island_km2: 5.0
+    fit: content            # 画幅按本图实际内容收紧
+    content_margin_mm: 16   # 内容四周保留的页面留白（毫米）
     title_block: {corner: SW, dx_mm: 0, dy_mm: 0}   # 标题块压在图上的角落
-    projection: {lon_0: 22.25, lat_0: 38.25, lat_1: 36.55, lat_2: 39.95}
     terrain: {enabled: true, opacity: 0.12, max_px: 1800}
     regions:
-      - {name: "伊庇鲁斯", lon: 20.6, lat: 39.7}
+      - {name: "伊庇鲁斯", lon: 20.63, lat: 39.66}
       - {name: "色萨利", lon: 22.3, lat: 39.6}
       - {name: "埃托利亚", lon: 21.6, lat: 38.8}
-      - {name: "玻俄提亚", lon: 23.1, lat: 38.5}
+      - {name: "玻俄提亚", lon: 23.72, lat: 38.55}
       - {name: "阿提卡", lon: 23.9, lat: 38.15}
-      - {name: "埃利斯", lon: 21.4, lat: 37.85}
       - {name: "阿卡迪亚", lon: 22.0, lat: 37.52}
-      - {name: "阿尔戈利斯", lon: 22.95, lat: 37.54}
+      - {name: "阿尔戈利斯", lon: 22.65, lat: 37.35}
       - {name: "美塞尼亚", lon: 21.85, lat: 37.15}
       - {name: "拉科尼亚", lon: 22.55, lat: 36.95}
-      - {name: "基克拉泽斯", lon: 25.3, lat: 36.9, over: any}   # 群岛名，跨海面
+      - {name: "基克拉泽斯", lon: 25.17, lat: 36.86, over: any}   # 群岛名，跨海面
+      - {name: "阿卡纳尼亚", lon: 20.95, lat: 38.65}
+      - {name: "福基斯", lon: 22.45, lat: 38.65}
+      - {name: "罗克里斯", lon: 23.15, lat: 38.85}
+      - {name: "阿开亚", lon: 22.0, lat: 38.02}
+      - {name: "欧波亚", lon: 24.6, lat: 38.8}
     seas:
-      - {name: "爱奥尼亚海", lon: 19.4, lat: 38.2}
+      - {name: "爱奥尼亚海", lon: 20.03, lat: 38.22}
       - {name: "科林斯湾", lon: 22.3, lat: 38.28}
       - {name: "爱琴海", lon: 24.7, lat: 38.9}
       - {name: "米尔托海", lon: 24.0, lat: 37.2}
-      - {name: "克里特海", lon: 24.4, lat: 36.0}
+      - {name: "克里特海", lon: 24.13, lat: 36.71}
+      - {name: "萨罗尼克湾", lon: 24.0, lat: 37.62}
+      - {name: "阿尔戈利斯湾", lon: 23.05, lat: 37.05}
+      - {name: "美塞尼亚湾", lon: 21.99, lat: 36.71}
 
   - id: "03-aegean-asia-minor"
     file: "03-aegean-asia-minor.svg"
     title: "北爱琴海与小亚细亚"
     subtitle: "公元前五世纪 · 海峡与爱奥尼亚诸城"
     extent: [22.0, 30.0, 36.0, 42.0]
-    simplify_km: 1.2
+    simplify_km: 1.21
     scalebar_km: 100
     min_island_km2: 5.0
+    fit: content            # 画幅按本图实际内容收紧
+    content_margin_mm: 16   # 内容四周保留的页面留白（毫米）
     title_block: {corner: SW, dx_mm: 0, dy_mm: 0}   # 标题块压在图上的角落
-    projection: {lon_0: 26.0, lat_0: 39.0, lat_1: 37.0, lat_2: 41.0}
     terrain: {enabled: true, opacity: 0.12, max_px: 1800}
     regions:
-      - {name: "马其顿", lon: 22.4, lat: 41.1}
-      - {name: "色雷斯", lon: 25.7, lat: 41.5}
+      - {name: "马其顿", lon: 22.46, lat: 41.05}
+      - {name: "色雷斯", lon: 25.91, lat: 41.1}
       - {name: "色萨利", lon: 22.4, lat: 39.5}
       - {name: "密西亚", lon: 28.0, lat: 39.8}
       - {name: "吕底亚", lon: 28.6, lat: 38.6}
       - {name: "爱奥尼亚", lon: 27.4, lat: 38.05}
       - {name: "卡里亚", lon: 28.5, lat: 37.3}
       - {name: "俾提尼亚", lon: 30.2, lat: 40.6}
+      - {name: "卡尔基狄克", lon: 22.65, lat: 40.15, over: any}
+      - {name: "特洛阿德", lon: 26.7, lat: 39.7}
+      - {name: "埃奥利斯", lon: 27.2, lat: 39.05}
+      - {name: "累斯博斯", lon: 26.25, lat: 39.15, over: any}
     seas:
       - {name: "爱琴海", lon: 25.0, lat: 38.4}
       - {name: "赫勒斯滂", lon: 26.0, lat: 40.05}
       - {name: "普罗滂提斯", lon: 27.9, lat: 40.75}
-      - {name: "黑海", lon: 30.0, lat: 41.65}
       - {name: "色雷斯海", lon: 24.6, lat: 40.3}
+      - {name: "伊卡里亚海", lon: 26.0, lat: 37.2}
 
   - id: "04-sicily-magna-graecia"
     file: "04-sicily-magna-graecia.svg"
     title: "西西里与大希腊"
     subtitle: "公元前五世纪 · 西部希腊诸城"
     extent: [12.0, 18.5, 35.5, 41.0]
-    simplify_km: 1.2
+    simplify_km: 1.05
     scalebar_km: 100
     min_island_km2: 5.0
+    fit: content            # 画幅按本图实际内容收紧
+    content_margin_mm: 16   # 内容四周保留的页面留白（毫米）
     title_block: {corner: SW, dx_mm: 0, dy_mm: 0}   # 标题块压在图上的角落
-    projection: {lon_0: 15.25, lat_0: 38.25, lat_1: 36.42, lat_2: 40.08}
     terrain: {enabled: true, opacity: 0.12, max_px: 1800}
     regions:
       - {name: "坎帕尼亚", lon: 15.25, lat: 40.8}
@@ -115,5 +130,63 @@ maps:
       - {name: "第勒尼安海", lon: 13.2, lat: 39.6}
       - {name: "爱奥尼亚海", lon: 17.9, lat: 38.0}
       - {name: "亚得里亚海", lon: 18.3, lat: 40.75}
-      - {name: "西西里海峡", lon: 12.0, lat: 37.1}
-      - {name: "地中海", lon: 14.6, lat: 35.75}
+      - {name: "地中海", lon: 14.16, lat: 36.83}
+      - {name: "墨西拿海峡", lon: 15.75, lat: 38.3}
+
+  - id: "05-power-blocs"
+    file: "05-power-blocs.svg"
+    title: "伯罗奔尼撒战争势力图"
+    subtitle: "公元前四三一年 · 战争初期的两大联盟"
+    extent: [18.8, 29.5, 35.3, 42.1]
+    simplify_km: 1.53
+    scalebar_km: 200
+    min_island_km2: 4.0
+    fit: content            # 画幅按本图实际内容收紧
+    content_margin_mm: 16   # 内容四周保留的页面留白（毫米）
+    title_block: {corner: SW, dx_mm: 0, dy_mm: 0}
+    faction_legend: {corner: NW, dx_mm: 0, dy_mm: 0}   # 收紧画幅后东北角被拜占庭一带占用
+    terrain: {enabled: true, opacity: 0.10, max_px: 1800}
+    source_note: "底图：Natural Earth 1:10m｜地点：Pleiades｜联盟归属：修昔底德《伯罗奔尼撒战争史》2.9"
+    regions:
+      - {name: "阿卡纳尼亚", lon: 21.45, lat: 38.75}
+      - {name: "伊庇鲁斯", lon: 20.7, lat: 39.7}
+      - {name: "色萨利", lon: 22.4, lat: 39.55}
+      - {name: "玻俄提亚", lon: 23.0, lat: 38.5}
+      - {name: "阿提卡", lon: 23.9, lat: 38.1}
+      - {name: "伯罗奔尼撒", lon: 22.0, lat: 37.35}
+      - {name: "卡尔基狄克", lon: 23.6, lat: 40.25}
+      - {name: "色雷斯", lon: 25.5, lat: 41.35}
+      - {name: "爱奥尼亚", lon: 28.2, lat: 38.4}
+      - {name: "卡里亚", lon: 28.3, lat: 37.0}
+      - {name: "中立的阿尔戈斯", lon: 22.7, lat: 37.55}
+    seas:
+      - {name: "爱奥尼亚海", lon: 19.5, lat: 37.7}
+      - {name: "爱琴海", lon: 25.0, lat: 38.7}
+      - {name: "克里特海", lon: 25.1, lat: 35.6}
+      - {name: "赫勒斯滂", lon: 26.1, lat: 40.1}
+      - {name: "普罗滂提斯", lon: 28.3, lat: 40.75}
+    faction_areas:
+      # 雅典同盟：横纹。范围为依据城邦与属邦归属绘制的示意面。
+      - {name: "阿提卡", side: athenian, points: [[23.05, 37.65], [24.2, 37.6], [24.45, 38.2], [23.9, 38.45], [23.25, 38.35]]}
+      - {name: "普拉提亚", side: athenian, points: [[23.15, 38.15], [23.65, 38.15], [23.65, 38.38], [23.15, 38.38]]}
+      - {name: "欧波亚", side: athenian, points: [[23.15, 37.75], [23.65, 37.6], [24.75, 38.2], [25.15, 39.0], [24.55, 39.2], [23.6, 38.85]]}
+      - {name: "科西拉", side: athenian, points: [[19.65, 39.15], [20.3, 39.1], [20.3, 40.05], [19.65, 40.1]]}
+      - {name: "阿卡纳尼亚与瑙帕克托斯", side: athenian, points: [[20.45, 38.05], [21.7, 37.95], [21.7, 39.25], [20.45, 39.3]]}
+      - {name: "扎金索斯", side: athenian, points: [[20.55, 37.5], [21.15, 37.45], [21.15, 38.05], [20.55, 38.1]]}
+      - {name: "北基克拉泽斯", side: athenian, points: [[23.8, 36.75], [25.95, 36.7], [25.95, 38.05], [23.8, 38.05]]}
+      - {name: "累斯博斯", side: athenian, points: [[25.65, 38.75], [26.95, 38.7], [27.0, 39.65], [25.6, 39.7]]}
+      - {name: "希俄斯", side: athenian, points: [[25.65, 37.85], [26.45, 37.85], [26.4, 38.65], [25.65, 38.65]]}
+      - {name: "萨摩斯", side: athenian, points: [[26.45, 37.4], [27.3, 37.35], [27.35, 38.05], [26.45, 38.1]]}
+      - {name: "罗得斯", side: athenian, points: [[27.55, 35.65], [28.65, 35.6], [28.65, 36.7], [27.5, 36.7]]}
+      - {name: "爱奥尼亚沿岸", side: athenian, points: [[26.5, 36.65], [28.2, 36.55], [28.35, 39.15], [27.15, 39.2], [26.5, 38.55]]}
+      - {name: "赫勒斯滂与普罗滂提斯沿岸", side: athenian, points: [[25.55, 39.65], [29.55, 40.2], [29.6, 41.3], [27.0, 41.05], [25.5, 40.35]]}
+      - {name: "色雷斯沿岸", side: athenian, points: [[22.7, 40.2], [26.1, 40.2], [26.15, 41.35], [22.8, 41.45]]}
+      # 斯巴达同盟：竖纹。
+      - {name: "伯罗奔尼撒同盟", side: spartan, points: [[20.65, 36.15], [23.65, 36.05], [23.7, 38.35], [20.65, 38.45]]}
+      - {name: "墨伽拉玻俄提亚福基斯罗克里斯", side: spartan, points: [[21.65, 37.95], [24.25, 37.95], [24.3, 39.25], [21.65, 39.3]]}
+      - {name: "安布拉基亚与留卡斯", side: spartan, points: [[20.2, 38.5], [21.45, 38.45], [21.5, 39.5], [20.2, 39.55]]}
+      # 中立区作为留白，从两方纹理中扣除。
+      - {name: "阿尔戈斯", side: neutral, points: [[22.2, 37.15], [23.2, 37.1], [23.25, 37.9], [22.2, 37.95]]}
+      - {name: "阿开亚大部", side: neutral, points: [[21.15, 37.85], [22.3, 37.8], [22.35, 38.35], [21.15, 38.4]]}
+      - {name: "米洛斯", side: neutral, points: [[24.15, 36.5], [24.7, 36.5], [24.7, 36.95], [24.15, 36.95]]}
+      - {name: "锡拉", side: neutral, points: [[25.15, 36.15], [25.75, 36.15], [25.75, 36.7], [25.15, 36.7]]}

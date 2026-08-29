@@ -25,8 +25,8 @@ from .build import PDF_NAME
 from .mapspec import load_map_places, load_maps, load_places, read_csv
 from .scene import compose
 
-MARKER_LIMIT = {"01-overview": 20}
-MARKER_LIMIT_DEFAULT = 25
+MARKER_LIMIT = {"01-overview": 32, "05-power-blocs": 36}
+MARKER_LIMIT_DEFAULT = 40
 VALID_MARKERS = {"city", "sanctuary", "island", "pass"}
 # 印刷标签只允许汉字与少量中文标点
 LABEL_RE = re.compile(r"^[一-鿿㐀-䶿·・／·、]+$")
@@ -254,7 +254,7 @@ def check_outputs(rep: Report) -> None:
         rep.note(f"{spec.file}：合法 XML，{C.PAGE_W_MM}×{C.PAGE_H_MM} mm，自包含，"
                  f"{size:,} 字节")
 
-    pdf = C.BUILD / PDF_NAME
+    pdf = C.PDF_OUTPUT / PDF_NAME
     if not pdf.exists():
         rep.error(f"缺少合并 PDF {PDF_NAME}")
         return

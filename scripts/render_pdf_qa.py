@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pypdfium2 as pdfium
 
-PDF = Path("build/classical-greece-atlas.pdf")
+PDF = Path("output/pdf/classical-greece-atlas.pdf")
 OUT = Path("build/qa")
 
 

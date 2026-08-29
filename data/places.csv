@@ -1,75 +1,115 @@
 id,zh_name,zh_aliases,ancient_name,latin_name,pleiades_id,pleiades_title,wikidata_id,lon,lat,place_type,location_precision,source,note
-athenae,雅典,,Ἀθῆναι,Athenae,579885,Athenae,Q844930,23.72391,37.97164,settlement,related,Pleiades 579885 (CC BY 3.0),
-piraeus,比雷埃夫斯,佩雷埃夫斯;派里尤斯,Πειραιεύς,Piraeus,580062,Peiraieus/Piraeus,Q58976,23.64461,37.93722,port,precise,Pleiades 580062 (CC BY 3.0),雅典外港
-sparta,斯巴达,拉刻代蒙,Σπάρτη,Sparta,570685,Sparta,Q5690,22.42467,37.08178,settlement,precise,Pleiades 570685 (CC BY 3.0),
-corinthus,科林斯,哥林多,Κόρινθος,Corinthus,570182,Corinthus/Korinthos,Q1363688,22.87861,37.90564,settlement,precise,Pleiades 570182 (CC BY 3.0),
-thebae,底比斯,忒拜,Θῆβαι,Thebae,541138,Thebai/Thebae,Q11225429,23.31765,38.31995,settlement,precise,Pleiades 541138 (CC BY 3.0),玻俄提亚底比斯
-delphi,德尔斐,,Δελφοί,Delphi,540726,Delphi,Q75459,22.50117,38.48229,sanctuary,precise,Pleiades 540726 (CC BY 3.0),
-olympia,奥林匹亚,,Ὀλυμπία,Olympia,570531,Olympia,Q38888,21.63081,37.63868,sanctuary,precise,Pleiades 570531 (CC BY 3.0),
-corcyra,科西拉,克基拉;科孚,Κόρκυρα,Corcyra,530834,Corcyra (settlement),Q3693378,19.90670,39.60813,settlement,precise,Pleiades 530834 (CC BY 3.0),
-amphipolis,安菲波利斯,,Ἀμφίπολις,Amphipolis,501347,Amphipolis,Q217414,23.84158,40.82581,settlement,precise,Pleiades 501347 (CC BY 3.0),
-byzantium,拜占庭,拜占廷,Βυζάντιον,Byzantium,520985,Byzantium,Q23725,28.97388,41.00590,settlement,precise,Pleiades 520985 (CC BY 3.0),
-ilium,特洛伊,伊利昂,Ἴλιον,Ilium,550595,Ilium/Troia,Q22647,26.23852,39.95744,settlement,precise,Pleiades 550595 (CC BY 3.0),
-mytilene,米提列涅,米蒂利尼,Μυτιλήνη,Mytilene,550763,Mytilene,Q42295059,26.54705,39.11048,settlement,precise,Pleiades 550763 (CC BY 3.0),累斯博斯岛
-chios,希俄斯,开俄斯,Χίος,Chios,550496,Chios (settlement),Q56399450,26.13298,38.37224,settlement,precise,Pleiades 550496 (CC BY 3.0),
-samos,萨摩斯,,Σάμος,Samos,599925,Samos (settlement),Q13580795,26.94448,37.68825,settlement,precise,Pleiades 599925 (CC BY 3.0),
-ephesus,以弗所,埃菲索斯,Ἔφεσος,Ephesus,599612,Ephesus/Arsinoe(ia),Q47611,27.34240,37.94016,settlement,precise,Pleiades 599612 (CC BY 3.0),
-miletus,米利都,,Μίλητος,Miletus,599799,Miletus,Q169460,27.27881,37.53046,settlement,precise,Pleiades 599799 (CC BY 3.0),
-rhodos,罗得斯,罗得;罗德斯,Ῥόδος,Rhodus,590030,Rhodos (settlement),Q13533316,28.22761,36.44311,settlement,precise,Pleiades 590030 (CC BY 3.0),城市建于公元前408年
-syracusae,叙拉古,锡拉库萨,Συράκουσαι,Syracusae,462503,Syracusae/Syrakousai,Q13670,15.28334,37.07008,settlement,related,Pleiades 462503 (CC BY 3.0),
-rhegium,雷吉翁,雷焦,Ῥήγιον,Rhegium,452416,Rhegion/Regium,Q3429952,15.64393,38.10928,settlement,precise,Pleiades 452416 (CC BY 3.0),
-taras,塔拉斯,塔兰托;塔伦图姆,Τάρας,Tarentum,442810,Taras/Tarentum/Neptunia,Q13498,17.23304,40.47379,settlement,related,Pleiades 442810 (CC BY 3.0),
-dodona,多多纳,,Δωδώνη,Dodona,530843,Dodona (Epirus),Q382317,20.78773,39.54644,sanctuary,precise,Pleiades 530843 (CC BY 3.0),
-ambracia,安布拉基亚,安布拉基亞,Ἀμβρακία,Ambracia,530794,Ambracia,Q661559,20.99009,39.15492,settlement,precise,Pleiades 530794 (CC BY 3.0),
-naupactus,瑙帕克托斯,纳夫帕克托斯;瑙帕克图斯,Ναύπακτος,Naupactus,540960,Naupactus,Q56398924,21.83127,38.39973,settlement,precise,Pleiades 540960 (CC BY 3.0),通行古典译名作瑙帕克托斯
-thermopylae,温泉关,塞莫皮莱;德摩比利,Θερμοπύλαι,Thermopylae,541140,Thermopylae,Q194450,22.54364,38.79600,pass,precise,Pleiades 541140 (CC BY 3.0),
-plataea,普拉提亚,普拉塔亚,Πλάταιαι,Plataeae,541063,Plataea,Q742538,23.27354,38.22108,settlement,precise,Pleiades 541063 (CC BY 3.0),
-chalcis,哈尔基斯,卡尔基斯,Χαλκίς,Chalcis,540703,Chalcis,Q21235810,23.62194,38.45714,settlement,precise,Pleiades 540703 (CC BY 3.0),埃维亚岛
-megara,麦加拉,墨伽拉,Μέγαρα,Megara,570468,Megara,Q184864,23.34016,37.98508,settlement,precise,Pleiades 570468 (CC BY 3.0),
-sicyon,西库翁,锡库翁,Σικυών,Sicyon,570668,Sicyon/Demetrias,Q368628,22.71219,37.98382,settlement,precise,Pleiades 570668 (CC BY 3.0),
-argos,阿尔戈斯,,Ἄργος,Argos,570106,Argos,Q13533353,22.72038,37.63105,settlement,precise,Pleiades 570106 (CC BY 3.0),
-epidaurus,埃皮达鲁斯,埃皮扎夫罗斯,Ἐπίδαυρος,Epidaurus,570228,Epidauros,Q233576,23.16016,37.63346,settlement,precise,Pleiades 570228 (CC BY 3.0),
-mantinea,曼提尼亚,曼丁尼亚,Μαντίνεια,Mantinea,570459,Mantineia/Antigoneia,Q1160195,22.39258,37.61738,settlement,precise,Pleiades 570459 (CC BY 3.0),
-tegea,特该亚,忒该亚;特耶阿,Τεγέα,Tegea,570707,Tegea,Q645234,22.42067,37.45530,settlement,precise,Pleiades 570707 (CC BY 3.0),
-pylos,皮洛斯,,Πύλος,Pylos,570640,Pylos/Koryphasion,Q7263152,21.65989,36.95203,settlement,precise,Pleiades 570640 (CC BY 3.0),美塞尼亚皮洛斯
-sphacteria,斯法克特里亚,斯法克特里亚岛,Σφακτηρία,Sphacteria,570686,Sphakteria (island),Q1303524,21.66551,36.92946,island,precise,Pleiades 570686 (CC BY 3.0),
-aegina,埃伊纳,埃吉纳,Αἴγινα,Aegina,579853,Aigina (settlement),Q57394139,23.42367,37.75015,settlement,precise,Pleiades 579853 (CC BY 3.0),
+athenae,雅典,,Ἀθῆναι,Athenae,579885,Athenae,,23.72391,37.97164,settlement,related,Pleiades 579885 (CC BY 3.0),
+piraeus,比雷埃夫斯,佩雷埃夫斯;派里尤斯,Πειραιεύς,Piraeus,580062,Peiraieus/Piraeus,,23.64461,37.93722,port,precise,Pleiades 580062 (CC BY 3.0),雅典外港
+sparta,斯巴达,拉刻代蒙,Σπάρτη,Sparta,570685,Sparta,,22.42467,37.08178,settlement,precise,Pleiades 570685 (CC BY 3.0),
+corinthus,科林斯,哥林多,Κόρινθος,Corinthus,570182,Corinthus/Korinthos,,22.87861,37.90564,settlement,precise,Pleiades 570182 (CC BY 3.0),
+thebae,底比斯,忒拜,Θῆβαι,Thebae,541138,Thebai/Thebae,,23.31765,38.31995,settlement,precise,Pleiades 541138 (CC BY 3.0),玻俄提亚底比斯
+delphi,德尔斐,,Δελφοί,Delphi,540726,Delphi,,22.50117,38.48229,sanctuary,precise,Pleiades 540726 (CC BY 3.0),
+olympia,奥林匹亚,,Ὀλυμπία,Olympia,570531,Olympia,,21.63081,37.63868,sanctuary,precise,Pleiades 570531 (CC BY 3.0),
+corcyra,科西拉,克基拉;科孚,Κόρκυρα,Corcyra,530834,Corcyra (settlement),,19.90670,39.60813,settlement,precise,Pleiades 530834 (CC BY 3.0),
+amphipolis,安菲波利斯,,Ἀμφίπολις,Amphipolis,501347,Amphipolis,,23.84158,40.82581,settlement,precise,Pleiades 501347 (CC BY 3.0),
+byzantium,拜占庭,拜占廷,Βυζάντιον,Byzantium,520985,Byzantium,,28.97388,41.00590,settlement,precise,Pleiades 520985 (CC BY 3.0),
+ilium,特洛伊,伊利昂,Ἴλιον,Ilium,550595,Ilium/Troia,,26.23852,39.95744,settlement,precise,Pleiades 550595 (CC BY 3.0),
+mytilene,米提列涅,米蒂利尼,Μυτιλήνη,Mytilene,550763,Mytilene,,26.54705,39.11048,settlement,precise,Pleiades 550763 (CC BY 3.0),累斯博斯岛
+chios,希俄斯,开俄斯,Χίος,Chios,550496,Chios (settlement),,26.13298,38.37224,settlement,precise,Pleiades 550496 (CC BY 3.0),
+samos,萨摩斯,,Σάμος,Samos,599925,Samos (settlement),,26.94448,37.68825,settlement,precise,Pleiades 599925 (CC BY 3.0),
+ephesus,以弗所,埃菲索斯,Ἔφεσος,Ephesus,599612,Ephesus/Arsinoe(ia),,27.34240,37.94016,settlement,precise,Pleiades 599612 (CC BY 3.0),
+miletus,米利都,,Μίλητος,Miletus,599799,Miletus,,27.27881,37.53046,settlement,precise,Pleiades 599799 (CC BY 3.0),
+rhodos,罗得斯,罗得;罗德斯,Ῥόδος,Rhodus,590030,Rhodos (settlement),,28.22761,36.44311,settlement,precise,Pleiades 590030 (CC BY 3.0),城市建于公元前408年
+syracusae,叙拉古,锡拉库萨,Συράκουσαι,Syracusae,462503,Syracusae/Syrakousai,,15.28334,37.07008,settlement,related,Pleiades 462503 (CC BY 3.0),
+rhegium,雷吉翁,雷焦,Ῥήγιον,Rhegium,452416,Rhegion/Regium,,15.64393,38.10928,settlement,precise,Pleiades 452416 (CC BY 3.0),
+taras,塔拉斯,塔兰托;塔伦图姆,Τάρας,Tarentum,442810,Taras/Tarentum/Neptunia,,17.23304,40.47379,settlement,related,Pleiades 442810 (CC BY 3.0),
+dodona,多多纳,,Δωδώνη,Dodona,530843,Dodona (Epirus),,20.78773,39.54644,sanctuary,precise,Pleiades 530843 (CC BY 3.0),
+ambracia,安布拉基亚,安布拉基亞,Ἀμβρακία,Ambracia,530794,Ambracia,,20.99009,39.15492,settlement,precise,Pleiades 530794 (CC BY 3.0),
+naupactus,瑙帕克托斯,纳夫帕克托斯;瑙帕克图斯,Ναύπακτος,Naupactus,540960,Naupactus,,21.83127,38.39973,settlement,precise,Pleiades 540960 (CC BY 3.0),通行古典译名作瑙帕克托斯
+thermopylae,温泉关,塞莫皮莱;德摩比利,Θερμοπύλαι,Thermopylae,541140,Thermopylae,,22.54364,38.79600,pass,precise,Pleiades 541140 (CC BY 3.0),
+plataea,普拉提亚,普拉塔亚,Πλάταιαι,Plataeae,541063,Plataea,,23.27354,38.22108,settlement,precise,Pleiades 541063 (CC BY 3.0),
+chalcis,哈尔基斯,卡尔基斯,Χαλκίς,Chalcis,540703,Chalcis,,23.62194,38.45714,settlement,precise,Pleiades 540703 (CC BY 3.0),埃维亚岛
+megara,麦加拉,墨伽拉,Μέγαρα,Megara,570468,Megara,,23.34016,37.98508,settlement,precise,Pleiades 570468 (CC BY 3.0),
+sicyon,西库翁,锡库翁,Σικυών,Sicyon,570668,Sicyon/Demetrias,,22.71219,37.98382,settlement,precise,Pleiades 570668 (CC BY 3.0),
+argos,阿尔戈斯,,Ἄργος,Argos,570106,Argos,,22.72038,37.63105,settlement,precise,Pleiades 570106 (CC BY 3.0),
+epidaurus,埃皮达鲁斯,埃皮扎夫罗斯,Ἐπίδαυρος,Epidaurus,570228,Epidauros,,23.16016,37.63346,settlement,precise,Pleiades 570228 (CC BY 3.0),
+mantinea,曼提尼亚,曼丁尼亚,Μαντίνεια,Mantinea,570459,Mantineia/Antigoneia,,22.39258,37.61738,settlement,precise,Pleiades 570459 (CC BY 3.0),
+tegea,特该亚,忒该亚;特耶阿,Τεγέα,Tegea,570707,Tegea,,22.42067,37.45530,settlement,precise,Pleiades 570707 (CC BY 3.0),
+pylos,皮洛斯,,Πύλος,Pylos,570640,Pylos/Koryphasion,,21.65989,36.95203,settlement,precise,Pleiades 570640 (CC BY 3.0),美塞尼亚皮洛斯
+sphacteria,斯法克特里亚,斯法克特里亚岛,Σφακτηρία,Sphacteria,570686,Sphakteria (island),,21.66551,36.92946,island,precise,Pleiades 570686 (CC BY 3.0),
+aegina,埃伊纳,埃吉纳,Αἴγινα,Aegina,579853,Aigina (settlement),,23.42367,37.75015,settlement,precise,Pleiades 579853 (CC BY 3.0),
 melos,米洛斯,,Μῆλος,Melos,570474,Melos (settlement),,24.42328,36.74386,settlement,precise,Pleiades 570474 (CC BY 3.0),
-delos,德洛斯,提洛,Δῆλος,Delos,599587,Delos (settlement),Q131911921,25.26819,37.39727,sanctuary,precise,Pleiades 599587 (CC BY 3.0),
-potidaea,波提狄亚,波提代亚,Ποτείδαια,Potidaea,491701,Poteidaia/Kassandreia,Q999468,23.32781,40.19370,settlement,precise,Pleiades 491701 (CC BY 3.0),
-olynthus,奥林托斯,奥林苏斯,Ὄλυνθος,Olynthus,491678,Olynthos,Q1141669,23.35426,40.29524,settlement,precise,Pleiades 491678 (CC BY 3.0),
-eion,埃伊翁,爱昂,Ἠιών,Eion,501410,Eion,Q1268859,23.87285,40.78932,settlement,precise,Pleiades 501410 (CC BY 3.0),
-thasos,萨索斯,塔索斯,Θάσος,Thasos,501634,Thasos (settlement),Q2409204,24.71754,40.78201,settlement,precise,Pleiades 501634 (CC BY 3.0),
-samothrace,萨莫色雷斯,萨莫特拉斯;萨莫色雷斯岛,Σαμοθρᾴκη,Samothrace,501596,Samothrace (settlement),Q123706384,25.53376,40.50211,settlement,precise,Pleiades 501596 (CC BY 3.0),
-sestos,塞斯托斯,塞司托斯,Σηστός,Sestos,501609,Sestos,Q593737,26.38927,40.21340,settlement,precise,Pleiades 501609 (CC BY 3.0),
-abydos,阿拜多斯,阿卑多斯,Ἄβυδος,Abydus,501325,Abydos,Q336446,26.41131,40.19422,settlement,precise,Pleiades 501325 (CC BY 3.0),赫勒斯滂沿岸
-lampsacus,兰普萨科斯,朗普萨科斯,Λάμψακος,Lampsacus,501570,Pityoussa/Lampsacus,Q1229422,26.69916,40.34669,settlement,precise,Pleiades 501570 (CC BY 3.0),
-cyzicus,基齐库斯,库济科斯,Κύζικος,Cyzicus,511218,Cyzicus,Q615449,27.88319,40.38556,settlement,precise,Pleiades 511218 (CC BY 3.0),
-methymna,墨提姆那,美西姆纳,Μήθυμνα,Methymna,550738,Methymna,Q38281278,26.17689,39.36917,settlement,precise,Pleiades 550738 (CC BY 3.0),累斯博斯岛
-phocaea,福西亚,福凯亚,Φώκαια,Phocaea,550823,Phocaea,Q428732,26.75656,38.67030,settlement,precise,Pleiades 550823 (CC BY 3.0),
-clazomenae,克拉佐门奈,克拉佐美奈,Κλαζομεναί,Clazomenae,550650,Klazomenai (earlier),Q536598,26.77057,38.36146,settlement,precise,Pleiades 550650 (CC BY 3.0),
-erythrae,厄律特莱,埃里色雷,Ἐρυθραί,Erythrae,550535,Erythrai,Q723091,26.48083,38.38278,settlement,precise,Pleiades 550535 (CC BY 3.0),爱奥尼亚厄律特莱
-halicarnassus,哈利卡纳苏斯,哈利卡那索斯,Ἁλικαρνασσός,Halicarnassus,599636,Halicarnassus/Halikarnassos,Q5843680,27.42215,37.04040,settlement,precise,Pleiades 599636 (CC BY 3.0),
-cos,科斯,科斯岛,Κῶς,Cos,599728,Kos (settlement),Q568212,27.28991,36.89360,settlement,precise,Pleiades 599728 (CC BY 3.0),
-cnidus,克尼多斯,尼多斯,Κνίδος,Cnidus,599576,Cnidus (Burgaz),Q690575,27.69938,36.73560,settlement,precise,Pleiades 599576 (CC BY 3.0),古典时期城址在布尔加兹
-segesta,塞杰斯塔,埃杰斯塔,Ἔγεστα,Segesta,462487,Segesta/Egesta,Q692847,12.83618,37.94032,settlement,precise,Pleiades 462487 (CC BY 3.0),
-selinus,塞利努斯,塞利农特,Σελινοῦς,Selinus,462489,Selinus,Q952173,12.82489,37.58828,settlement,precise,Pleiades 462489 (CC BY 3.0),
-himera,希梅拉,,Ἱμέρα,Himera,462244,Himera,Q1111219,13.82234,37.96984,settlement,precise,Pleiades 462244 (CC BY 3.0),
-acragas,阿克拉加斯,阿格里真托,Ἀκράγας,Acragas,462086,Akragas/Agrigentum,Q13678,13.58548,37.29059,settlement,precise,Pleiades 462086 (CC BY 3.0),
-gela,杰拉,革拉,Γέλα,Gela,462214,Gela,Q58008539,14.25847,37.06309,settlement,precise,Pleiades 462214 (CC BY 3.0),
-camarina,卡马里纳,卡马里那,Καμάρινα,Camarina,462126,Camarina,Q854843,14.44832,36.87188,settlement,precise,Pleiades 462126 (CC BY 3.0),
-catana,卡塔那,卡塔尼亚,Κατάνη,Catana,462270,Katane/Catina,Q1903,15.08814,37.50296,settlement,precise,Pleiades 462270 (CC BY 3.0),
-leontini,莱昂蒂尼,伦蒂尼,Λεοντῖνοι,Leontini,462279,Leontini,Q488240,14.99812,37.28548,settlement,precise,Pleiades 462279 (CC BY 3.0),
-naxos_siciliae,纳克索斯,西西里纳克索斯,Νάξος,Naxos,462386,Naxos (settlement),Q1233293,15.26779,37.82249,settlement,precise,Pleiades 462386 (CC BY 3.0),西西里的纳克索斯
-messana,墨西拿,墨萨那;赞克莱,Ζάγκλη/Μεσσήνη,Messana,462538,Zancle/Messana,Q4023782,15.55663,38.19225,settlement,precise,Pleiades 462538 (CC BY 3.0),
-megara_hyblaea,麦加拉·许布莱亚,墨伽拉·许布莱亚,Μέγαρα Ὑβλαία,Megara Hyblaea,462307,Megara Hyblaia,Q1457477,15.18228,37.20380,settlement,precise,Pleiades 462307 (CC BY 3.0),
-motya,莫提亚,莫齐亚,Μοτύη,Motya,462373,Motya,Q962184,12.46831,37.86741,settlement,precise,Pleiades 462373 (CC BY 3.0),腓尼基城市
-panormus,帕诺尔莫斯,巴勒莫,Πάνορμος,Panormus,462410,Pan(h)ormus,Q60181639,13.35244,38.11123,settlement,precise,Pleiades 462410 (CC BY 3.0),腓尼基城市
-locri,洛克里,洛克里·埃皮泽菲里,Λοκροὶ Ἐπιζεφύριοι,Locri Epizephyrii,452369,Lokroi Epizephyrioi,Q54619,16.24434,38.22630,settlement,precise,Pleiades 452369 (CC BY 3.0),
-croton,克罗顿,克罗托内,Κρότων,Croton,452317,Croto(n),Q13526919,17.12797,39.08117,settlement,precise,Pleiades 452317 (CC BY 3.0),
-sybaris_thurii,锡巴里斯／图里伊,锡巴里斯;图里伊;苏巴里斯,Σύβαρις/Θούριοι,Sybaris/Thurii,452457,Sybaris/Thurii/Copia,Q220583,16.49426,39.71733,settlement,precise,Pleiades 452457 (CC BY 3.0),图里伊建于公元前444年，与锡巴里斯故址同处一地
-metapontum,梅塔蓬图姆,梅塔蓬托,Μεταπόντιον,Metapontum,442658,Metapontum,Q1058770,16.82433,40.38364,settlement,precise,Pleiades 442658 (CC BY 3.0),
-poseidonia,波塞多尼亚,派斯图姆,Ποσειδωνία,Poseidonia,442733,Poseidonia/Paestum,Q329967,15.00508,40.42085,settlement,precise,Pleiades 442733 (CC BY 3.0),
-elea,埃利亚,韦利亚;伊利亚,Ἐλέα,Elea,452488,Velia/Elea,Q272968,15.15616,40.16050,settlement,precise,Pleiades 452488 (CC BY 3.0),
-cumae,库迈,库麦,Κύμη,Cumae,432808,Cumae/Kyme (Campanian),Q243456,14.05638,40.84795,settlement,precise,Pleiades 432808 (CC BY 3.0),
-neapolis,尼亚波利斯,那不勒斯;涅阿波利斯,Νεάπολις,Neapolis,433014,Parthenope/Neapolis,Q2634,14.25287,40.84000,settlement,precise,Pleiades 433014 (CC BY 3.0),
+delos,德洛斯,提洛,Δῆλος,Delos,599587,Delos (settlement),,25.26819,37.39727,sanctuary,precise,Pleiades 599587 (CC BY 3.0),
+potidaea,波提狄亚,波提代亚,Ποτείδαια,Potidaea,491701,Poteidaia/Kassandreia,,23.32781,40.19370,settlement,precise,Pleiades 491701 (CC BY 3.0),
+olynthus,奥林托斯,奥林苏斯,Ὄλυνθος,Olynthus,491678,Olynthos,,23.35426,40.29524,settlement,precise,Pleiades 491678 (CC BY 3.0),
+eion,埃伊翁,爱昂,Ἠιών,Eion,501410,Eion,,23.87285,40.78932,settlement,precise,Pleiades 501410 (CC BY 3.0),
+thasos,萨索斯,塔索斯,Θάσος,Thasos,501634,Thasos (settlement),,24.71754,40.78201,settlement,precise,Pleiades 501634 (CC BY 3.0),
+samothrace,萨莫色雷斯,萨莫特拉斯;萨莫色雷斯岛,Σαμοθρᾴκη,Samothrace,501596,Samothrace (settlement),,25.53376,40.50211,settlement,precise,Pleiades 501596 (CC BY 3.0),
+sestos,塞斯托斯,塞司托斯,Σηστός,Sestos,501609,Sestos,,26.38927,40.21340,settlement,precise,Pleiades 501609 (CC BY 3.0),
+abydos,阿拜多斯,阿卑多斯,Ἄβυδος,Abydus,501325,Abydos,,26.41131,40.19422,settlement,precise,Pleiades 501325 (CC BY 3.0),赫勒斯滂沿岸
+lampsacus,兰普萨科斯,朗普萨科斯,Λάμψακος,Lampsacus,501570,Pityoussa/Lampsacus,,26.69916,40.34669,settlement,precise,Pleiades 501570 (CC BY 3.0),
+cyzicus,基齐库斯,库济科斯,Κύζικος,Cyzicus,511218,Cyzicus,,27.88319,40.38556,settlement,precise,Pleiades 511218 (CC BY 3.0),
+methymna,墨提姆那,美西姆纳,Μήθυμνα,Methymna,550738,Methymna,,26.17689,39.36917,settlement,precise,Pleiades 550738 (CC BY 3.0),累斯博斯岛
+phocaea,福西亚,福凯亚,Φώκαια,Phocaea,550823,Phocaea,,26.75656,38.67030,settlement,precise,Pleiades 550823 (CC BY 3.0),
+clazomenae,克拉佐门奈,克拉佐美奈,Κλαζομεναί,Clazomenae,550650,Klazomenai (earlier),,26.77057,38.36146,settlement,precise,Pleiades 550650 (CC BY 3.0),
+erythrae,厄律特莱,埃里色雷,Ἐρυθραί,Erythrae,550535,Erythrai,,26.48083,38.38278,settlement,precise,Pleiades 550535 (CC BY 3.0),爱奥尼亚厄律特莱
+halicarnassus,哈利卡纳苏斯,哈利卡那索斯,Ἁλικαρνασσός,Halicarnassus,599636,Halicarnassus/Halikarnassos,,27.42215,37.04040,settlement,precise,Pleiades 599636 (CC BY 3.0),
+cos,科斯,科斯岛,Κῶς,Cos,599728,Kos (settlement),,27.28991,36.89360,settlement,precise,Pleiades 599728 (CC BY 3.0),
+cnidus,克尼多斯,尼多斯,Κνίδος,Cnidus,599576,Cnidus (Burgaz),,27.69938,36.73560,settlement,precise,Pleiades 599576 (CC BY 3.0),古典时期城址在布尔加兹
+segesta,塞杰斯塔,埃杰斯塔,Ἔγεστα,Segesta,462487,Segesta/Egesta,,12.83618,37.94032,settlement,precise,Pleiades 462487 (CC BY 3.0),
+selinus,塞利努斯,塞利农特,Σελινοῦς,Selinus,462489,Selinus,,12.82489,37.58828,settlement,precise,Pleiades 462489 (CC BY 3.0),
+himera,希梅拉,,Ἱμέρα,Himera,462244,Himera,,13.82234,37.96984,settlement,precise,Pleiades 462244 (CC BY 3.0),
+acragas,阿克拉加斯,阿格里真托,Ἀκράγας,Acragas,462086,Akragas/Agrigentum,,13.58548,37.29059,settlement,precise,Pleiades 462086 (CC BY 3.0),
+gela,杰拉,革拉,Γέλα,Gela,462214,Gela,,14.25847,37.06309,settlement,precise,Pleiades 462214 (CC BY 3.0),
+camarina,卡马里纳,卡马里那,Καμάρινα,Camarina,462126,Camarina,,14.44832,36.87188,settlement,precise,Pleiades 462126 (CC BY 3.0),
+catana,卡塔那,卡塔尼亚,Κατάνη,Catana,462270,Katane/Catina,,15.08814,37.50296,settlement,precise,Pleiades 462270 (CC BY 3.0),
+leontini,莱昂蒂尼,伦蒂尼,Λεοντῖνοι,Leontini,462279,Leontini,,14.99812,37.28548,settlement,precise,Pleiades 462279 (CC BY 3.0),
+naxos_siciliae,纳克索斯,西西里纳克索斯,Νάξος,Naxos,462386,Naxos (settlement),,15.26779,37.82249,settlement,precise,Pleiades 462386 (CC BY 3.0),西西里的纳克索斯
+messana,墨西拿,墨萨那;赞克莱,Ζάγκλη/Μεσσήνη,Messana,462538,Zancle/Messana,,15.55663,38.19225,settlement,precise,Pleiades 462538 (CC BY 3.0),
+megara_hyblaea,麦加拉·许布莱亚,墨伽拉·许布莱亚,Μέγαρα Ὑβλαία,Megara Hyblaea,462307,Megara Hyblaia,,15.18228,37.20380,settlement,precise,Pleiades 462307 (CC BY 3.0),
+motya,莫提亚,莫齐亚,Μοτύη,Motya,462373,Motya,,12.46831,37.86741,settlement,precise,Pleiades 462373 (CC BY 3.0),腓尼基城市
+panormus,帕诺尔莫斯,巴勒莫,Πάνορμος,Panormus,462410,Pan(h)ormus,,13.35244,38.11123,settlement,precise,Pleiades 462410 (CC BY 3.0),腓尼基城市
+locri,洛克里,洛克里·埃皮泽菲里,Λοκροὶ Ἐπιζεφύριοι,Locri Epizephyrii,452369,Lokroi Epizephyrioi,,16.24434,38.22630,settlement,precise,Pleiades 452369 (CC BY 3.0),
+croton,克罗顿,克罗托内,Κρότων,Croton,452317,Croto(n),,17.12797,39.08117,settlement,precise,Pleiades 452317 (CC BY 3.0),
+sybaris_thurii,锡巴里斯／图里伊,锡巴里斯;图里伊;苏巴里斯,Σύβαρις/Θούριοι,Sybaris/Thurii,452457,Sybaris/Thurii/Copia,,16.49426,39.71733,settlement,precise,Pleiades 452457 (CC BY 3.0),图里伊建于公元前444年，与锡巴里斯故址同处一地
+metapontum,梅塔蓬图姆,梅塔蓬托,Μεταπόντιον,Metapontum,442658,Metapontum,,16.82433,40.38364,settlement,precise,Pleiades 442658 (CC BY 3.0),
+poseidonia,波塞多尼亚,派斯图姆,Ποσειδωνία,Poseidonia,442733,Poseidonia/Paestum,,15.00508,40.42085,settlement,precise,Pleiades 442733 (CC BY 3.0),
+elea,埃利亚,韦利亚;伊利亚,Ἐλέα,Elea,452488,Velia/Elea,,15.15616,40.16050,settlement,precise,Pleiades 452488 (CC BY 3.0),
+cumae,库迈,库麦,Κύμη,Cumae,432808,Cumae/Kyme (Campanian),,14.05638,40.84795,settlement,precise,Pleiades 432808 (CC BY 3.0),
+neapolis,尼亚波利斯,那不勒斯;涅阿波利斯,Νεάπολις,Neapolis,433014,Parthenope/Neapolis,,14.25287,40.84000,settlement,precise,Pleiades 433014 (CC BY 3.0),
+eleusis,埃琉西斯,厄琉息斯,Ἐλευσίς,Eleusis,579920,Eleusis,,23.53740,38.04110,sanctuary,precise,Pleiades 579920 (CC BY 3.0),厄琉西斯秘仪圣地
+tanagra,塔纳格拉,,Τάναγρα,Tanagra,580114,Tanagra,,23.58649,38.30929,settlement,precise,Pleiades 580114 (CC BY 3.0),
+orchomenus_boeotia,奥尔霍迈诺斯,奥尔霍美诺斯,Ὀρχομενός,Orchomenus,540987,Orchomenos/Orchomenus (Boeotia),,22.97470,38.49332,settlement,precise,Pleiades 540987 (CC BY 3.0),玻俄提亚奥尔霍迈诺斯
+chaeronea,喀罗尼亚,凯罗尼亚,Χαιρώνεια,Chaeronea,540701,Chaeronea,,22.84143,38.49397,settlement,precise,Pleiades 540701 (CC BY 3.0),
+thespiae,忒斯庇埃,特斯皮埃,Θεσπιαί,Thespiae,541141,Thespiai,,23.15236,38.29453,settlement,precise,Pleiades 541141 (CC BY 3.0),
+haliartus,哈利阿尔托斯,,Ἁλίαρτος,Haliartus,540801,Haliartos,,23.08660,38.37832,settlement,precise,Pleiades 540801 (CC BY 3.0),
+elis,埃利斯,,Ἦλις,Elis,570220,Elis (city),,21.37436,37.89127,settlement,precise,Pleiades 570220 (CC BY 3.0),
+lepreum,勒普瑞翁,莱普瑞翁,Λέπρεον,Lepreum,570423,Lepreon,,21.72513,37.44003,settlement,precise,Pleiades 570423 (CC BY 3.0),
+phlius,弗利乌斯,,Φλειοῦς,Phlius,570602,Phleious,,22.64658,37.84460,settlement,precise,Pleiades 570602 (CC BY 3.0),
+troezen,特洛伊曾,特罗曾,Τροιζήν,Troezen,570756,Troizen,,23.34849,37.50311,settlement,precise,Pleiades 570756 (CC BY 3.0),
+hermione,赫尔米奥涅,,Ἑρμιόνη,Hermione,570292,Hermion(e),,23.24359,37.38522,settlement,precise,Pleiades 570292 (CC BY 3.0),
+methone_messenia,墨托涅,迈索尼,Μεθώνη,Methone,570483,Methone/Mothone (Messenian),,21.70444,36.81435,settlement,precise,Pleiades 570483 (CC BY 3.0),美塞尼亚墨托涅
+pellene,佩列涅,,Πελλήνη,Pellene,570576,Pellene,,22.54834,38.04321,settlement,precise,Pleiades 570576 (CC BY 3.0),
+leucas,留卡斯,莱夫卡斯,Λευκάς,Leucas,530974,Leucas,,20.71312,38.80734,settlement,precise,Pleiades 530974 (CC BY 3.0),
+anactorium,阿纳克托里翁,,Ἀνακτόριον,Anactorium,530798,Anactorium,,20.84350,38.92094,settlement,precise,Pleiades 530798 (CC BY 3.0),
+zacynthus,扎金索斯,赞特,Ζάκυνθος,Zacynthus,531154,Zakythos/Zacynthus (settlement),,20.89528,37.79139,settlement,precise,Pleiades 531154 (CC BY 3.0),
+cephallania,凯法利尼亚,凯法洛尼亚,Κεφαλληνία,Cephallania,530826,Cephallania (island),,20.54740,38.24942,island,precise,Pleiades 530826 (CC BY 3.0),岛屿中心点
+oiniadai,奥尼阿代,,Οἰνιάδαι,Oiniadai,531016,Oiniadai,,21.19638,38.40707,settlement,precise,Pleiades 531016 (CC BY 3.0),
+stratos_acarnania,斯特拉托斯,,Στράτος,Stratos,531104,Stratos,,21.31948,38.67173,settlement,precise,Pleiades 531104 (CC BY 3.0),阿卡纳尼亚斯特拉托斯
+akanthos,阿坎托斯,阿坎苏斯,Ἄκανθος,Acanthus,501339,Akanthos,,23.88668,40.39336,settlement,precise,Pleiades 501339 (CC BY 3.0),
+stageira,斯塔吉拉,斯塔基拉,Στάγειρα,Stageira,501625,Stageira,,23.79533,40.59179,settlement,precise,Pleiades 501625 (CC BY 3.0),
+mende,门德,,Μένδη,Mende,501515,Mende,,23.42228,39.96378,settlement,precise,Pleiades 501515 (CC BY 3.0),
+skione,斯基奥涅,,Σκιώνη,Scione,501620,Skione,,23.57478,39.93906,settlement,precise,Pleiades 501620 (CC BY 3.0),
+torone,托罗涅,,Τορώνη,Torone,501646,Torone,,23.90079,39.97708,settlement,precise,Pleiades 501646 (CC BY 3.0),
+abdera,阿卜德拉,,Ἄβδηρα,Abdera,501323,Abdera,,24.97431,40.93283,settlement,precise,Pleiades 501323 (CC BY 3.0),
+maroneia,马罗涅亚,,Μαρώνεια,Maroneia,501507,Maroneia,,25.51143,40.87375,settlement,precise,Pleiades 501507 (CC BY 3.0),
+perinthus,佩林托斯,,Πέρινθος,Perinthus,511357,Perinthus/Heraclea,,27.95297,40.97101,settlement,precise,Pleiades 511357 (CC BY 3.0),
+smyrna,士麦那,斯米尔纳,Σμύρνα,Smyrna,550771,Naulochon/Smyrna/Palaia Smyrna,,27.17044,38.46404,settlement,precise,Pleiades 550771 (CC BY 3.0),取古风至古典时期旧城址
+cyme_aeolis,库迈,居迈,Κύμη,Cyme,550506,Cyme,,26.93832,38.76019,settlement,precise,Pleiades 550506 (CC BY 3.0),埃奥利斯库迈
+colophon,科洛丰,,Κολοφών,Colophon,599577,Colophon,,27.14831,38.10825,settlement,precise,Pleiades 599577 (CC BY 3.0),
+priene,普里埃涅,普里恩,Πριήνη,Priene,599905,Priene/‘Lince’?,,27.29658,37.66078,settlement,precise,Pleiades 599905 (CC BY 3.0),
+iasos,伊阿索斯,,Ἰασός,Iasos,599664,Iasos,,27.58487,37.27920,settlement,precise,Pleiades 599664 (CC BY 3.0),
+eryx,埃律克斯,厄律克斯,Ἔρυξ,Eryx,462201,Eryx,,12.58361,38.03652,settlement,precise,Pleiades 462201 (CC BY 3.0),
+entella,恩特拉,,Ἔντελλα,Entella,462197,Entella,,13.12498,37.77398,settlement,precise,Pleiades 462197 (CC BY 3.0),
+solus,索卢斯,索洛伊,Σολοῦς,Solus,462497,Solous,,13.52745,38.08250,settlement,precise,Pleiades 462497 (CC BY 3.0),
+heraclea_minoa,米诺亚的赫拉克利亚,赫拉克利亚·米诺亚,Ἡράκλεια Μινῴα,Heraclea Minoa,462237,Heraclea Minoa,,13.28030,37.39476,settlement,precise,Pleiades 462237 (CC BY 3.0),
+hipponion,希波尼翁,维博瓦伦蒂亚,Ἱππώνιον,Hipponion,452337,Hipponion/Vibo Valentia,,16.09765,38.67558,settlement,precise,Pleiades 452337 (CC BY 3.0),
+medma,墨德玛,,Μέδμα,Medma,452375,Medma,,15.97637,38.48733,settlement,precise,Pleiades 452375 (CC BY 3.0),
+caulonia,考洛尼亚,卡乌洛尼亚,Καυλωνία,Caulonia,452295,Caulonia,,16.40901,38.38138,settlement,precise,Pleiades 452295 (CC BY 3.0),
+scylletium,斯库勒提翁,斯基拉提翁,Σκυλλήτιον,Scylletium,452439,Scylletium/Scolacium,,16.59444,38.80781,settlement,precise,Pleiades 452439 (CC BY 3.0),

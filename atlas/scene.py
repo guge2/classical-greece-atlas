@@ -9,6 +9,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
+from shapely.geometry import MultiPolygon, Polygon
+from shapely.ops import unary_union
 
 from . import config as C
 from . import fonts as F
@@ -36,6 +38,16 @@ class Polys:
     stroke: str = "none"
     stroke_w: float = 0.0
     clip: str = "frame"
+
+
+@dataclass
+class HatchPolys:
+    """以横纹或竖纹填充的一组多边形。"""
+    rings: list
+    orientation: str
+    color: str
+    spacing_mm: float = 3.2
+    stroke_w: float = C.LW_HATCH
 
 
 @dataclass
@@ -141,6 +153,10 @@ def compose(spec, places: dict, map_places: list, book: F.FontBook) -> Scene:
     if spec.terrain and terrain.exists():
         scene.add(Image(terrain, frame.fx, frame.fy, frame.fw, frame.fh,
                         opacity=spec.terrain_opacity, clip="land"))
+
+    # 势力纹理位于地形之上、海岸线之下。横纹代表雅典同盟，竖纹代表斯巴达同盟。
+    faction_items = _faction_hatches(spec, scene.land_rings)
+    scene.layers.extend(faction_items)
     scene.add(Polys(scene.land_rings, stroke=C.STRUCTURE, stroke_w=C.LW_COASTLINE))
 
     planner = LabelPlanner(frame, edge_pad_mm=C.LABEL_EDGE_MM)
@@ -153,6 +169,12 @@ def compose(spec, places: dict, map_places: list, book: F.FontBook) -> Scene:
     for box in footer_boxes:
         planner.add_fixed_text(box)
         scene.fixed_boxes.append(box)
+
+    legend_items = []
+    if spec.faction_areas:
+        legend_items, legend_box = _faction_legend(spec, book)
+        planner.add_fixed_text(legend_box)
+        scene.fixed_boxes.append(legend_box)
 
     # 海域名与地区名：位置固定，先于地点标签占位
     for kind, items, font_key, size_pt, color, tracking in (
@@ -221,8 +243,104 @@ def compose(spec, places: dict, map_places: list, book: F.FontBook) -> Scene:
     scene.placements = planner.placements
 
     scene.layers.extend(title_items)
+    scene.layers.extend(legend_items)
     scene.layers.extend(footer_items)
     return scene
+
+
+def _page_polygon(frame, points):
+    """经纬度多边形转换为页面坐标多边形。"""
+    arr = np.asarray(points, dtype=float)
+    px, py = frame.to_page(arr[:, 0], arr[:, 1])
+    return Polygon(np.column_stack([px, py]))
+
+
+def _rings_from_geom(geom):
+    if geom.is_empty:
+        return []
+    polys = [geom] if isinstance(geom, Polygon) else list(getattr(geom, "geoms", []))
+    out = []
+    for poly in polys:
+        if not isinstance(poly, Polygon) or poly.is_empty:
+            continue
+        ext = np.asarray(poly.exterior.coords)
+        holes = [np.asarray(r.coords) for r in poly.interiors]
+        out.append((ext, holes))
+    return out
+
+
+def _faction_hatches(spec, land_rings):
+    """把手工审定的联盟示意范围与陆地相交，输出两种纹理。"""
+    if not spec.faction_areas:
+        return []
+    land_parts = []
+    for ext, holes in land_rings:
+        poly = Polygon(ext, holes)
+        if poly.is_valid:
+            land_parts.append(poly)
+        else:
+            land_parts.append(poly.buffer(0))
+    land = unary_union(land_parts)
+    grouped = {}
+    for area in spec.faction_areas:
+        poly = _page_polygon(spec.frame, area.points)
+        if not poly.is_valid:
+            poly = poly.buffer(0)
+        grouped.setdefault(area.side, []).append(poly)
+    unions = {side: unary_union(polys).intersection(land)
+              for side, polys in grouped.items()}
+    neutral = unions.get("neutral")
+    if neutral is not None:
+        for side in ("athenian", "spartan"):
+            if side in unions:
+                unions[side] = unions[side].difference(neutral)
+    # 零星重叠处让雅典同盟优先，避免横竖线叠成误导性的第三种阵营。
+    if "athenian" in unions and "spartan" in unions:
+        unions["spartan"] = unions["spartan"].difference(unions["athenian"])
+    styles = {
+        "athenian": ("horizontal", C.ATHENIAN_HATCH),
+        "spartan": ("vertical", C.SPARTAN_HATCH),
+    }
+    items = []
+    for side in ("athenian", "spartan"):
+        if side not in unions:
+            continue
+        orientation, color = styles[side]
+        rings = _rings_from_geom(unions[side])
+        if rings:
+            items.append(HatchPolys(rings, orientation, color))
+    return items
+
+
+def _faction_legend(spec, book):
+    """势力图图例，放在配置指定角落并参与碰撞检查。"""
+    cfg = spec.faction_legend
+    corner = str(cfg.get("corner", "NE")).upper()
+    width, height = 70.0, 32.0
+    x = C.SAFE_MM if corner in ("NW", "SW") else C.PAGE_W_MM - C.SAFE_MM - width
+    y = C.SAFE_MM if corner in ("NW", "NE") else C.PAGE_H_MM - C.SAFE_MM - height - 8.0
+    x += float(cfg.get("dx_mm", 0.0))
+    y += float(cfg.get("dy_mm", 0.0))
+    items = [Rect(x, y, width, height, fill=C.PAPER,
+                  stroke=C.STRUCTURE, stroke_w=0.22)]
+    items.append(Text("战争初期的联盟势力", x + 5.0, y + 7.0,
+                      "sans-medium", C.PT_LEGEND, C.TEXT))
+    entries = [
+        ("horizontal", C.ATHENIAN_HATCH, "雅典同盟及其属邦"),
+        ("vertical", C.SPARTAN_HATCH, "斯巴达同盟及其盟邦"),
+    ]
+    for idx, (orientation, color, label) in enumerate(entries):
+        sy = y + 11.0 + idx * 7.2
+        ring = np.asarray([(x + 5.0, sy), (x + 17.0, sy),
+                           (x + 17.0, sy + 4.5), (x + 5.0, sy + 4.5),
+                           (x + 5.0, sy)])
+        items.append(HatchPolys([(ring, [])], orientation, color, spacing_mm=2.3))
+        items.append(Rect(x + 5.0, sy, 12.0, 4.5, fill="none",
+                          stroke=C.STRUCTURE, stroke_w=0.18))
+        items.append(Text(label, x + 20.0, sy + 3.8, "sans", C.PT_LEGEND, C.TEXT))
+    box = Box(x - 1.0, y - 1.0, x + width + 1.0, y + height + 1.0,
+              tag="势力图图例")
+    return items, box
 
 
 def scale_denominator(frame) -> int:

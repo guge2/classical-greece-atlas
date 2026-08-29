@@ -1,0 +1,14 @@
+{
+  "proj_bounds": [
+    -514683.21910108236,
+    -355392.7595043529,
+    504132.00566139666,
+    365055.1494348286
+  ],
+  "size": [
+    1098,
+    776
+  ],
+  "crs": "+proj=lcc +lat_0=38.525 +lon_0=24.625 +lat_1=36.575 +lat_2=40.475 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs",
+  "source": "Natural Earth GRAY_HR_SR_OB"
+}

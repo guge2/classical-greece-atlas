@@ -9,6 +9,7 @@ DERIVED = DATA / "derived"
 CACHE = ROOT / "cache"
 BUILD = ROOT / "build"
 QA = BUILD / "qa"
+PDF_OUTPUT = ROOT / "output" / "pdf"
 
 PLACES_SEED = DATA / "places_seed.csv"
 PLACES = DATA / "places.csv"
@@ -40,6 +41,8 @@ PLACE_ACCENT = "#844B3D"   # 地点强调色
 TEXT = "#2F3532"           # 正文
 REGION_TEXT = "#6E6A60"    # 地区名
 SEA_TEXT = "#61777B"       # 海域名
+ATHENIAN_HATCH = "#567984" # 雅典同盟：横纹
+SPARTAN_HATCH = "#875547"  # 斯巴达同盟：竖纹
 
 # ---------------------------------------------------------------- 线宽（毫米）
 LW_COASTLINE = 0.20
@@ -47,6 +50,7 @@ LW_COASTLINE_MINOR = 0.14
 LW_FRAME = 0.35
 LW_SCALEBAR = 0.30
 LW_MARKER = 0.22
+LW_HATCH = 0.22
 
 # ---------------------------------------------------------------- 字号（磅）
 PT_TITLE = 22.0
@@ -57,6 +61,7 @@ PT_PLACE_MAJOR = 9.0
 PT_PLACE_MINOR = 7.5
 PT_SCALE = 7.0
 PT_SOURCE = 5.5
+PT_LEGEND = 7.5
 
 PT_TO_MM = 25.4 / 72.0
 
@@ -72,9 +77,13 @@ FONT_SPECS = {
     "sans-medium": ("NotoSansSC-VF.ttf", {"wght": 500}),
 }
 
-# ---------------------------------------------------------------- 输出体积上限（字节）
+# ---------------------------------------------------------------- PDF 栅格与输出体积
+# 地形是整份 PDF 中唯一的大面积栅格层；72 dpi 足以承载低透明度阴影，
+# 海岸线、纹理、标记与文字仍保持矢量，因此打印时不会一并变糊。
+PDF_IMAGE_DPI = 72
+
 MAX_SVG_BYTES = 2_500_000
-MAX_PDF_BYTES = 8_000_000
+MAX_PDF_BYTES = 4_000_000   # 五页轻量版；超过即由严格校验阻止交付
 TERRAIN_MAX_PX = 1800
 TERRAIN_OPACITY = 0.12
 
